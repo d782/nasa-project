@@ -2,6 +2,7 @@ const request=require('supertest');
 const app=require('../../app');
 const  {mongoConnect,mongoDisconnect}=require('../../services/mongo')
 require('jest');
+const {loadPlanets}=require('../../models/planets.model')
 
 const completeLaunch={
     "mission":"ZTM155",
@@ -20,6 +21,7 @@ describe('launches API',()=>{
     //beforeAll -> 
     beforeAll(async ()=>{
         await mongoConnect();
+        await loadPlanets();
     })
     afterAll(async ()=>{
         await mongoDisconnect();
