@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "sh node_modules/.bin/jest",
     "test-watch": "jest --watch",
     "start": "set PORT=5000 && nodemon server.js",
     "cluster": "pm2 start server.js -i max",
