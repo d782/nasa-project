@@ -15,7 +15,7 @@ mongoose.connection.once('open', ()=>{
     console.log('Mongodb ready!')
 });
 mongoose.connection.on('error',(err)=>{
-    console.err(`${err}`)
+    console.log(`${err}`)
 })
 
 
