@@ -6,11 +6,13 @@
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
-    "install": "start npm run install-server & start npm run install-client",
+    "install-windows": "start npm run install-server & start npm run install-client",
+    "install": "npm run install-server & npm run install-client",
     "client":"npm start --prefix client",
     "server":"npm start --prefix server",
     "watch":"start npm run client & start npm run server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy":""
   },
   "keywords": [],
   "author": "",
